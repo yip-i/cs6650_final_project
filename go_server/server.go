@@ -38,6 +38,7 @@ func skierGet(w http.ResponseWriter, r *http.Request) {
 	seasonID, _ := strconv.Atoi(urlSplit[4])
 	dayID, _ := strconv.Atoi(urlSplit[6])
 	skierID, _ := strconv.Atoi(urlSplit[8])
+
 	fmt.Fprintf(w, strconv.Itoa(resortID)+"\n")
 	fmt.Fprintf(w, strconv.Itoa(seasonID)+"\n")
 	fmt.Fprintf(w, strconv.Itoa(dayID)+"\n")
@@ -46,21 +47,21 @@ func skierGet(w http.ResponseWriter, r *http.Request) {
 }
 
 func skierPost(w http.ResponseWriter, r *http.Request) {
-	url := r.URL.Path
-	urlSplit := strings.Split(url, "/")
+	// url := r.URL.Path
+	// urlSplit := strings.Split(url, "/")
 
-	resortID, _ := strconv.Atoi(urlSplit[2])
+	// resortID, _ := strconv.Atoi(urlSplit[2])
 
-	seasonID, _ := strconv.Atoi(urlSplit[4])
-	dayID, _ := strconv.Atoi(urlSplit[6])
-	skierID, _ := strconv.Atoi(urlSplit[8])
+	// seasonID, _ := strconv.Atoi(urlSplit[4])
+	// dayID, _ := strconv.Atoi(urlSplit[6])
+	// skierID, _ := strconv.Atoi(urlSplit[8])
 
 	w.WriteHeader(http.StatusCreated)
 
-	fmt.Fprintf(w, strconv.Itoa(resortID)+"\n")
-	fmt.Fprintf(w, strconv.Itoa(seasonID)+"\n")
-	fmt.Fprintf(w, strconv.Itoa(dayID)+"\n")
-	fmt.Fprintf(w, strconv.Itoa(skierID)+"\n")
+	// fmt.Fprintf(w, strconv.Itoa(resortID)+"\n")
+	// fmt.Fprintf(w, strconv.Itoa(seasonID)+"\n")
+	// fmt.Fprintf(w, strconv.Itoa(dayID)+"\n")
+	// fmt.Fprintf(w, strconv.Itoa(skierID)+"\n")
 	return
 }
 

@@ -16,10 +16,11 @@ app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT} 🎉 🚀`);
 })
 
-app.get("/skiers/", async(req, res) => {
-
+app.get("/skiers/:resortID/seasons/:seasonsID/days/:dayID/skiers/:skierID", async(req, res) => {
+    // const skierID = parseInt(req.params.resortID, 10);
+    res.sendStatus(200);
 });
 
-app.post("/skiers/", async(req, res) => {
-
+app.post("/skiers/:resortID/seasons/:seasonsID/days/:dayID/skiers/:skierID", async(req, res) => {
+    res.sendStatus(201);
 });
