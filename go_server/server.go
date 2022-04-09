@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"strconv"
 	"strings"
 )
 
@@ -31,18 +30,20 @@ func skierHandler(w http.ResponseWriter, r *http.Request) {
 
 func skierGet(w http.ResponseWriter, r *http.Request) {
 	url := r.URL.Path
-	urlSplit := strings.Split(url, "/")
+	fmt.Fprintf(w, url)
 
-	resortID, _ := strconv.Atoi(urlSplit[2])
+	// urlSplit := strings.Split(url, "/")
 
-	seasonID, _ := strconv.Atoi(urlSplit[4])
-	dayID, _ := strconv.Atoi(urlSplit[6])
-	skierID, _ := strconv.Atoi(urlSplit[8])
+	// resortID, _ := strconv.Atoi(urlSplit[2])
 
-	fmt.Fprintf(w, strconv.Itoa(resortID)+"\n")
-	fmt.Fprintf(w, strconv.Itoa(seasonID)+"\n")
-	fmt.Fprintf(w, strconv.Itoa(dayID)+"\n")
-	fmt.Fprintf(w, strconv.Itoa(skierID)+"\n")
+	// seasonID, _ := strconv.Atoi(urlSplit[4])
+	// dayID, _ := strconv.Atoi(urlSplit[6])
+	// skierID, _ := strconv.Atoi(urlSplit[8])
+
+	// fmt.Fprintf(w, strconv.Itoa(resortID)+"\n")
+	// fmt.Fprintf(w, strconv.Itoa(seasonID)+"\n")
+	// fmt.Fprintf(w, strconv.Itoa(dayID)+"\n")
+	// fmt.Fprintf(w, strconv.Itoa(skierID)+"\n")
 	return
 }
 
