@@ -1,5 +1,4 @@
 import express from "express";
-import pkg from "@prisma/client";
 import morgan from "morgan";
 import cors from "cors";
 
