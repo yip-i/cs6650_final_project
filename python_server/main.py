@@ -10,8 +10,10 @@ def skier(resortID, seasonID, dayID, skierID):
     elif request.method == "GET":
         return dayID
     return "Hello"
+
 @app.route('/resorts/<resortID>', methods = ['GET', 'POST'])
 def resort(resortID):
     return resortID
+
 if __name__ == "__main__":
-    app.run(port=5000)
+    app.run(host="0.0.0.0",port=8080)
