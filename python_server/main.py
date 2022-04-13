@@ -11,6 +11,13 @@ def skier(resortID, seasonID, dayID, skierID):
         return dayID
     return "Hello"
 
+@app.route('/ping', methods=['GET', 'POST'])
+def ping():
+    if request.method == "POST":
+        return "pong"
+    else:
+        return "pong"
+
 @app.route('/resorts/<resortID>', methods = ['GET', 'POST'])
 def resort(resortID):
     return resortID
